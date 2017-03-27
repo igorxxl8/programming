@@ -105,7 +105,7 @@ void Add(char *a, char *b, char* c) {
 	c[cLen] = '\0';
 	_strrev(c);
 	c[cLen - 1] = '\0';
-	if ((cLen - 1 > 2)||(cLen - 1 == 2 && c[0] != 49)) {
+	if ((cLen - 1 > 2 && c[0] != 49)||(cLen - 1 == 2 && c[0] != 49)) {
 		c[0] = ' ';
 	}
 }
