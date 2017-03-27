@@ -101,7 +101,7 @@ int main()
 	Init(Array, Dimension);
 	printA(Array, Dimension, Dimension);
 	int* MaxEl = SearchMax(Array, Dimension);
-	printf("MaxEl = %d, Str - %d, Column - %d\n",MaxEl[0], MaxEl[1], MaxEl[2]);
+	printf("Maximum Element = %d, String - %d, Column - %d\n",MaxEl[0], MaxEl[1] + 1, MaxEl[2] + 1);
 	NewArrayFirst(Array, &Dimension, MaxEl);
 	NewArraySecond(Array, --Dimension);
 	printA(Array, Dimension, lol);
