@@ -3,16 +3,16 @@
 
 #define BUF 25
 
-struct Tree {// структура троичное дерево
+struct Tree { // the structure of the ternary tree
 	int info;
 	Tree* left;
 	Tree* right;
 	Tree* middle;
 };
 
-void AddNode(int data, Tree **node); // функци€ добавлени€ элемента дерева
-int Depth(Tree *node, int depth_count); // функци€ определ€юща€ сколько уровней в троичном дереве
-int Input();// функци€ проерки правильности ввода целого числа
+void AddNode(int data, Tree **node); // function which add item in the tree
+int Depth(Tree *node, int depth_count); // function of counting the number of levels int the tree
+int Input();// input validation function
 
 int main()
 {
@@ -28,7 +28,7 @@ int main()
 	system("pause");
     return 0;
 }
-void AddNode(int data, Tree **node) {// функци€ добавлени€ элемента дерева
+void AddNode(int data, Tree **node) {// function which add item in the tree
 	if (*node == NULL) {
 		*node = (Tree*)calloc(1, sizeof(Tree));
 		(*node)->info = data;
@@ -45,7 +45,7 @@ void AddNode(int data, Tree **node) {// функци€ добавлени€ элемента дерева
 			puts("There is such element in the tree!");
 	}
 }
-int Max(int a, int b, int c) {// функци€, наход€ща€ максимальное число из трех
+int Max(int a, int b, int c) {// function which serach maximum number
 	if ((a > b) && ((a > c) || (a == c)))
 		return a;
 	else if ((b > a) && ((b > c) || (b == c)))
@@ -56,7 +56,7 @@ int Max(int a, int b, int c) {// функци€, наход€ща€ максимальное число из трех
 		return a;
 }
 
-int Depth(Tree *Ptr, int dep_count)// функци€ определ€юща€ сколько уровней в троичном дереве
+int Depth(Tree *Ptr, int dep_count)// function of counting the number of levels int the tree
 {
 	if (Ptr == NULL)
 		return dep_count;
@@ -64,7 +64,7 @@ int Depth(Tree *Ptr, int dep_count)// функци€ определ€юща€ сколько уровней в тро
 	return Max(Depth(Ptr->left, dep_count + 1), Depth(Ptr->right, dep_count + 1), Depth(Ptr->middle, dep_count + 1));
 }
 
-int Input() {// функци€ проерки правильности ввода целого числа
+int Input() {// input validation function
 	char a[BUF];
 	for (;;) {
 		gets_s(a, BUF);
