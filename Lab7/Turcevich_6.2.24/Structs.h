@@ -9,7 +9,7 @@ using namespace std;
 #define BUF 25
 
 struct services {// struct of services
-	int NumberServ;// номер услуги
+	int NumberServ;
 	string NameServ;
 	int Price;
 	bool Obligatory;
@@ -29,7 +29,7 @@ struct turProgram {// turist programm set of services
 };
 
 void ExMenu();
-int Input();
+int Input();// func of input validation
 int AddService(services** Head, int i);
 int OformProgram(turProgram** Begin);
 int AvaibleProgram(turProgram* Begin);
