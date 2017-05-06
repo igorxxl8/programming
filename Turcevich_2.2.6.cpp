@@ -23,7 +23,7 @@ double Input() {
 		else
 			printf("Error. Enter natural number.");
 	}
-};
+}
 
 double FuncSin(double a) {
 	return sin(a);
