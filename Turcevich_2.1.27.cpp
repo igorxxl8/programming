@@ -41,7 +41,7 @@ int Input() {
 		else
 			printf("Error. Enter a number: ");
 	}
-};
+}
 
 int Menu();
 void Cement(Zakaz *a) {
