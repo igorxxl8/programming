@@ -24,6 +24,7 @@ double Input() {
 			printf("Error. Enter natural number.");
 	}
 };
+
 double FuncSin(double a) {
 	return sin(a);
 }
@@ -95,4 +96,3 @@ int main()
 	system("pause");
 	return 0;
 }
-
