@@ -81,4 +81,4 @@ int Input() {// input validation function
 		else
 			printf("Error. Enter natural number.");
 	}
-};
+}
