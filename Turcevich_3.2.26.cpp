@@ -9,12 +9,14 @@ int** CrArray(int b) {
 	}
 	return a;
 }
+
 void Init(int **a, int b) {
 	srand(time(0));
 	for (int i = 0; i < b; i++)
 		for (int j = 0; j < b; j++)
 			a[i][j] = rand() % 100;
 }
+
 void printA(int **a, int b, int c) {
 	std::cout << "----------------------\n";
 	if (b == c)
@@ -28,7 +30,9 @@ void printA(int **a, int b, int c) {
 	}
 	std::cout << "----------------------\n";
 }
+
 #define BUF 15
+
 int Input() {
 	char a[BUF];
 	for (;;) {
@@ -47,10 +51,12 @@ int Input() {
 			printf("Error. Enter natural number.");
 	}
 };
+
 void Dim(int *a) {
 	std::cout << "Enter a dimension of array: ";
 	*a = Input();
 }
+
 int* SearchMax(int** A, int a) {
 	int Temp = 0, line, column;
 	for (int i = 0; i < a; i++) {
@@ -68,6 +74,7 @@ int* SearchMax(int** A, int a) {
 	B[2] = column;
 	return B;
 }
+
 void NewArrayFirst(int **a, int *b, int *c) {
 	for (int i = c[1]; i < *b - 1; i++)
 		for (int j = 0; j < *b; j++)
@@ -77,6 +84,7 @@ void NewArrayFirst(int **a, int *b, int *c) {
 			a[j][i] = a[j][i + 1];
 	b--;
 }
+
 void NewArraySecond(int** a, int b) {
 	int temp;
 	for (int i = 0, j = b - 1; i < b / 2; i++, j--)
@@ -92,6 +100,7 @@ void NewArraySecond(int** a, int b) {
 			a[k][j] = temp;
 		}
 }
+
 int main()
 {
 	int Dimension, **Array = NULL, lol;
