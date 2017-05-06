@@ -23,12 +23,14 @@ int Input() {
 			printf("Error. Enter natural number.");
 	}
 };
+
 int EnterStart() {
 	int a;
 	printf("Enter a start of the interval:");
 	a = Input();
 	return a;
 };
+
 int EnterEnd(int a) {
 	int b;
 	printf("Enter a end of the interval:");
@@ -40,6 +42,7 @@ int EnterEnd(int a) {
 			printf("Error. The end of the interal is less than start.\nPlease, enter a number which bigger than start of interval.");
 	}
 };
+
 int BinTrans(int a) {
 	int bin=0, i;
 	for (i= 0; a > 0; i++) {
@@ -77,4 +80,3 @@ int main()
 	system("pause");
     return 0;
 }
-
