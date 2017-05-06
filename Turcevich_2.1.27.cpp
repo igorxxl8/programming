@@ -24,8 +24,8 @@ struct Zakaz
 	int Weight = 0;
 	int CounVag = 0;
 	char Country1[10];
-
 };
+
 int Input() {
 	char a[10];
 	for (;;) {
@@ -42,6 +42,7 @@ int Input() {
 			printf("Error. Enter a number: ");
 	}
 };
+
 int Menu();
 void Cement(Zakaz *a) {
 	system("cls");
@@ -54,6 +55,7 @@ void Cement(Zakaz *a) {
 	a[0].Doxod += (Cost - a[0].Cement*CEMENT_2);
 	printf("---------------------------------------------\n");
 }
+
 void Gravii(Zakaz *a) {
 	system("cls");
 	printf("---------------------------------------------\n");
@@ -65,6 +67,7 @@ void Gravii(Zakaz *a) {
 	a[0].Doxod += (Cost - a[0].Gravii*GRAVII_2);
 	printf("---------------------------------------------\n");
 }
+
 void Beton(Zakaz *a) {
 	system("cls");
 	printf("---------------------------------------------\n");
@@ -76,6 +79,7 @@ void Beton(Zakaz *a) {
 	a[0].Doxod += (Cost - a[0].Beton*BETON_2);
 	printf("---------------------------------------------\n");
 };
+
 void Country(Zakaz *a) {
 	system("cls");
 	printf("Delivery in which country?\n");
@@ -98,6 +102,7 @@ void Country(Zakaz *a) {
 		}
 	printf("---------------------------------------------\n");
 };
+
 void DevVer() {
 	system("cls");
 	printf("----------------------------------------------------------------\n");
@@ -105,6 +110,7 @@ void DevVer() {
 	printf("----------------------------------------------------------------\n");
 	Sleep(5000);
 }
+
 void View(Zakaz *a) {
 	system("cls");
 	float b = (float)a[0].Weight / (float)VAGON;
@@ -118,12 +124,14 @@ void View(Zakaz *a) {
 	printf("---------------------------------------------\n");
 	Sleep(10000);
 }
+
 void Buy(Zakaz *a, Zakaz *b, int N) {
 	system("cls");
 	b = (Zakaz*)malloc(sizeof(Zakaz) * N);
 	N--; 
 	b[N] = a[0];
 }
+
 int main() {
 	Zakaz zakaz[1];
 	strcpy_s(zakaz[0].Country1, "undefine");
